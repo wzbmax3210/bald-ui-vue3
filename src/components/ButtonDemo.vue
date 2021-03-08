@@ -1,12 +1,12 @@
 <template>
-<div>
-$END$
-</div>
+  <div>
+    button demo
+  </div>
 </template>
 
 <script lang="ts">
 export default {
-name: 'ButtonDemo'
+  name: 'ButtonDemo'
 }
 </script>
 
