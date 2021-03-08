@@ -1,13 +1,14 @@
 <template>
-  <div>
-    导航栏 | <router-link to="/">Home</router-link> | <router-link to="/xxx">HelloWorld</router-link>
-  </div>
-  <hr>
   <router-view></router-view>
 </template>
 
-<script>
+<script lang="ts">
+import { ref, provide } from 'vue'
 export default  {
-  name: 'App'
+  name: 'App',
+  setup() {
+    const asideVisible = ref(false)
+    provide('asideVisible', asideVisible)
+  }
 }
 </script>
