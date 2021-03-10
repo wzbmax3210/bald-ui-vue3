@@ -1,5 +1,5 @@
 <template>
-  <button @click="toggle" :class="{ checked: value, disabled }" :disabled="disabled">
+  <button @click="toggle" class="bald-switch" :class="{ 'bald-checked': value }" :disabled="disabled">
     <span></span>
   </button>
 </template>
@@ -22,10 +22,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $h: 22px;
   $h2: $h - 4px;
-  button {
+  .bald-switch {
     height: $h;
     width: $h * 2;
     border: none;
@@ -47,7 +47,7 @@ export default {
     &:disabled {
       cursor: not-allowed;
     }
-    &.checked {
+    &.bald-checked {
       background: #1890ff;
       > span {
         left: calc(100% - #{$h2} - 2px);
@@ -61,7 +61,7 @@ export default {
         width: $h2 + 4px;
       }
     }
-    &.checked:active {
+    &.bald-checked:active {
       > span {
         width: $h2 + 4px;
         margin-left: -4px;

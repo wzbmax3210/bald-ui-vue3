@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Switch v-model:value="bool"/>
+    <Switch v-model:value="bool" disabled/>
 <!-- 等同于这种写法，取代vue2.x的.sync   <Switch :value="y" @update:value="y = $event"/>-->
   </div>
 </template>
